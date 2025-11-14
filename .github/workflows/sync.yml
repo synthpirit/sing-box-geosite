@@ -4,6 +4,12 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
+    inputs:
+      force_update:
+        description: "是否强制刷新配置？"
+        type: boolean
+        required: false
+        default: false  
   schedule:
     - cron: '0 12 * * *'
 
